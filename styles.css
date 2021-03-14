@@ -36,7 +36,7 @@ td {
 
 th, 
 td {
-    padding: 2%;
+    padding: 3%;
     text-align: center;
 }
 
@@ -67,7 +67,7 @@ td {
 
 /* Color de fondo segun clima */
 .azul-bueno {
-    background: #6262c7;
+    background: #567ff1;
 }
 
 .violeta-inestable {
