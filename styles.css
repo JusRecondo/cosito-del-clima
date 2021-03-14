@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main section div {
+    display: flex;
+    align-items: center;
+}
+
+#temperatura {
+    margin-left: 1rem;
+    font-size: 20px;;
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid black;
+}
+
+th, 
+td {
+    padding: 2%;
+    text-align: center;
+}
+
+#delfines {
+    margin: 10%;
+    width: 90%;
+}
+
+@media (max-width: 1000px) {
+    #delfines {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;;
+    }
+
+    main section div {
+        justify-content: space-evenly;
+    }
+}
+
+/* Color de fondo segun clima */
+.azul-bueno {
+    background: #6262c7;
+}
+
+.violeta-inestable {
+    background:#843cc7;
+}
+
+.rosa-lluvia {
+    background: #ffc0cb;
+}
+
+.gris-niebla {
+    background: #888888;
+}
