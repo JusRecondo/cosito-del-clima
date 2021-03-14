@@ -6,7 +6,7 @@ const iconoClima = document.querySelector("#iconoClima");
 const temperatura = document.querySelector("#temperatura");
 
 fetch(
-  "http://api.openweathermap.org/data/2.5/weather?id=3433955&appid=091960382fa3f6e096e82ae3990d8325&units=Metric"
+  "https://api.openweathermap.org/data/2.5/weather?id=3433955&appid=091960382fa3f6e096e82ae3990d8325&units=Metric"
 )
   .then((response) => response.json())
   .then((data) => {
