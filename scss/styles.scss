@@ -8,6 +8,11 @@
         font-family: 'Courier New', Courier, monospace;
         padding: 10%;
         background: #000000;
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
         
         main {
             display: flex;
@@ -74,8 +79,13 @@
                     width: 80%;
                 }
             }
+           
+        }
 
-            
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 12px;
         }
 
         /* Color de fondo segun clima */
@@ -129,6 +139,7 @@
                 }
             }
         }
+
 
     }
 
