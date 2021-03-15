@@ -16,7 +16,8 @@ function getLocation() {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
   } else { 
     ubicacion.style.display = 'block';
-    ubicacion.innerHTML = "Geolocation is not supported by this browser.";
+    ubicacion.innerHTML = "La geolocalizaión no es soportada por ese navegador :(";
+    body.classList.add("rojo-error");
   }
 
   return latitud;
