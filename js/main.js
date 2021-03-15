@@ -59,7 +59,7 @@ function showPosition(position) {
       ciudad.innerHTML = data.name;
   
       let codigoIcono = data.weather[0].icon;
-      let rutaIcono = "http://openweathermap.org/img/w/" + codigoIcono + ".png ";
+      let rutaIcono = "https://openweathermap.org/img/w/" + codigoIcono + ".png ";
       iconoClima.src = rutaIcono;
   
       temperatura.innerText = data.main.temp + '°';
