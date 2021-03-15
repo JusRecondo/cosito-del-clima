@@ -22,6 +22,10 @@ main section div {
     align-items: center;
 }
 
+#ubicacion {
+    display: none;
+}
+
 #temperatura {
     margin-left: 1rem;
     font-size: 20px;;
@@ -80,4 +84,8 @@ td {
 
 .gris-niebla {
     background: #888888;
+}
+
+.rojo-error {
+    background: #e64c4c;
 }

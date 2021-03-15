@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El cosito del clima</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
     
     <main>
         <section>
             <h1>El cosito del clima</h1>
-            <h3>Ciudad de Buenos Aires</h3>
+            <h2 id="ciudad"></h2>
+            <span id="ubicacion"></span>
             <div>
-                <img id="iconoClima" alt="icono del clima">
+                <img id="iconoClima">
                 <span id="temperatura"></span>
             </div>
 
@@ -43,16 +44,20 @@
                     <td>blanco</td>
                     <td>nieve</td>
                 </tr>
+                <tr>
+                    <td>rojo</td>
+                    <td>no se pudo encontrar tu ubicación :(</td>
+                </tr>
             </table>
         </section>
         <section>
-            <img src="delfines.png" id="delfines">
+            <img src="img/delfines.png" id="delfines">
         </section>
 
 
     </main>
 
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

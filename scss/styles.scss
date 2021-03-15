@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    body {
+        height: 100vh;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 10%;
+        background: #000000;
+        
+        main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            @media (max-width: 500px) {
+                flex-direction: column;
+
+                table {
+                    font-size: 14px;
+                }
+            
+            }    
+            
+            #ubicacion {
+                display: none;
+            }
+
+            div {
+                display: flex;
+                align-items: center; 
+                
+                @media (max-width: 500px) {
+                    justify-content: space-evenly;
+                }
+                
+                
+                #temperatura {
+                    margin-left: 1rem;
+                    font-size: 20px;
+                }
+                
+            }
+
+            table {
+                border: 1px solid black;
+
+                tr,
+                th,
+                td {
+                    border: 1px solid black;
+                }
+
+                th, 
+                td {
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 14px;
+                }
+
+            }
+
+            #delfines {
+                margin: 10%;
+                width: 90%;
+
+                @media (max-width: 1000px) {
+                    width: 80%;
+                }
+            }
+
+            
+        }
+
+        /* Color de fondo segun clima */
+        &.azul-bueno {
+            background: #567ff1;
+
+            table {
+                tr:nth-child(2) {
+                   background: #91a8e9;
+                }
+            }
+
+        }
+
+        &.violeta-inestable {
+            background:#843cc7;
+
+            table {
+                tr:nth-child(3) {
+                   background: #a877d6;
+                }
+            }
+        }
+
+        &.rosa-lluvia {
+            background: #ffc0cb;
+
+            table {
+                tr:nth-child(4) {
+                   background: #f8dee2;
+                }
+            }
+        }
+
+        &.gris-niebla {
+            background: #888888;
+
+            table {
+                tr:nth-child(5) {
+                   background: #e0dfdf;
+                }
+            }
+        }
+
+        &.rojo-error {
+            background: #e64c4c;
+
+            table {
+                tr:nth-child(7) {
+                   background: #e67373;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
