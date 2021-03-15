@@ -1,15 +1,10 @@
 "use strict";
 
-let clima;
 const body = document.querySelector("body");
 const iconoClima = document.querySelector("#iconoClima");
 const temperatura = document.querySelector("#temperatura");
 const ciudad = document.querySelector("#ciudad");
-
-let ubicacion = document.querySelector("#ubicacion");
-/* let latitud;
-let longitud; */
-
+const ubicacion = document.querySelector("#ubicacion");
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -19,8 +14,6 @@ function getLocation() {
     ubicacion.innerHTML = "La geolocalización no es soportada por este navegador :(";
     body.classList.add("rojo-error");
   }
-
-  return latitud;
 }
 
 function showError(error) {
@@ -52,7 +45,7 @@ function showPosition(position) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      clima = data.weather[0].description;
+      const clima = data.weather[0].description;
       
       ciudad.innerHTML = data.name;
   
