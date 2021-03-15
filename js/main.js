@@ -7,8 +7,8 @@ const temperatura = document.querySelector("#temperatura");
 const ciudad = document.querySelector("#ciudad");
 
 let ubicacion = document.querySelector("#ubicacion");
-let latitud;
-let longitud;
+/* let latitud;
+let longitud; */
 
 
 function getLocation() {
@@ -43,11 +43,8 @@ function showError(error) {
 }
 
 function showPosition(position) {
-  latitud = position.coords.latitude;
-  longitud = position.coords.longitude;
-
-  ubicacion.innerHTML = "Latitud: " + latitud + 
-  "<br>Longitud: " + longitud;
+  const latitud = position.coords.latitude;
+  const longitud = position.coords.longitude;
 
   fetch(
     "https://api.openweathermap.org/data/2.5/weather?lat="+latitud+"&lon="+longitud+"&appid=091960382fa3f6e096e82ae3990d8325&units=Metric"
