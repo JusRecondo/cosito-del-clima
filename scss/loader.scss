@@ -1,0 +1,32 @@
+.loader-screen {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(243, 236, 236);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: opacity 0.3s linear;
+    width: 100%;
+    z-index: 9999;
+    
+    .loader {
+        width: 120px;
+        height: 120px;
+       -webkit-animation: spin 2.5s linear infinite; /* Safari */
+       animation: spin 2.5s linear out infinite;
+    }
+    
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}

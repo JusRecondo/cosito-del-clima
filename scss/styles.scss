@@ -1,3 +1,5 @@
+@import 'loader';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,7 +9,7 @@
         height: 100vh;
         font-family: 'Courier New', Courier, monospace;
         padding: 10%;
-        background: #000000;
+        background: #e6e4e4;
 
         a {
             text-decoration: none;
