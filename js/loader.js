@@ -1,6 +1,6 @@
 'user strict';
 
-const loadScreen = document.querySelector('.loader-screen');
+/* const loadScreen = document.querySelector('.loader-screen');
 
 const fadeEffect = setInterval(() => {
     if(!loadScreen.style.opacity) {
@@ -14,4 +14,4 @@ const fadeEffect = setInterval(() => {
     }
 }, 150);
 
-window.addEventListener('load', fadeEffect);
+window.addEventListener('load', fadeEffect); */

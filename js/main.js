@@ -6,6 +6,8 @@ const temperatura = document.querySelector("#temperatura");
 const ciudad = document.querySelector("#ciudad");
 const ubicacion = document.querySelector("#ubicacion");
 
+const loadScreen = document.querySelector('.loader-screen');
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -35,6 +37,8 @@ function showError(error) {
   }
 }
 
+
+
 function showPosition(position) {
   const latitud = position.coords.latitude;
   const longitud = position.coords.longitude;
@@ -45,6 +49,8 @@ function showPosition(position) {
     .then((response) => response.json())
     .then((data) => {
      console.log(data);
+
+     loadScreen.style.opacity = 0;
      const clima = data.weather[0].main;
 
       
