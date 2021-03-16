@@ -22,10 +22,12 @@ function getLocation() {
 function showError(error) {
   ubicacion.style.display = "block";
   body.classList.add("rojo-error");
+
   switch (error.code) {
     case error.PERMISSION_DENIED:
       ubicacion.innerHTML =
         "Activá la ubicación para que el cosito funcione :)";
+      loadScreen.style.opacity = 0;
       break;
     case error.POSITION_UNAVAILABLE:
       ubicacion.innerHTML = "Location information is unavailable.";
@@ -61,6 +63,7 @@ function showPosition(position) {
       ciudad.innerHTML = data.name;
 
       let codigoIcono = data.weather[0].icon;
+
       let rutaIcono =
         "https://openweathermap.org/img/w/" + codigoIcono + ".png ";
       iconoClima.src = rutaIcono;
@@ -91,6 +94,9 @@ function showPosition(position) {
           body.classList.add("gris-niebla");
           break;
       }
+    })
+    .catch((error) => {
+      console.log(error);
     });
 }
 
