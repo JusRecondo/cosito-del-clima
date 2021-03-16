@@ -63,8 +63,18 @@ function showPosition(position) {
           break;
         case "scattered clouds":
         case "broken clouds":
+        case "overcast clouds":  
           body.classList.add("violeta-inestable");
           break;
+        case "light rain":
+        case "moderate rain":
+        case "heavy intensity rain":
+        case "very heavy rain":
+        case "extreme rain":
+        case "freezing rain":
+        case "light intensity shower rain":
+        case "heavy intensity shower rain":
+        case "ragged shower rain":
         case "shower rain":
         case "rain":
         case "thunderstorm":
