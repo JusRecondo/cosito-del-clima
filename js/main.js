@@ -44,8 +44,9 @@ function showPosition(position) {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      const clima = data.weather[0].description;
+     console.log(data);
+     const clima = data.weather[0].main;
+
       
       ciudad.innerHTML = data.name;
   
@@ -57,30 +58,26 @@ function showPosition(position) {
       
   
       switch (clima) {
-        case "clear sky":
-        case "few clouds":
+        case "Clear":
           body.classList.add("azul-bueno");
           break;
-        case "scattered clouds":
-        case "broken clouds":
-        case "overcast clouds":  
+        case "Clouds":  
           body.classList.add("violeta-inestable");
           break;
-        case "light rain":
-        case "moderate rain":
-        case "heavy intensity rain":
-        case "very heavy rain":
-        case "extreme rain":
-        case "freezing rain":
-        case "light intensity shower rain":
-        case "heavy intensity shower rain":
-        case "ragged shower rain":
-        case "shower rain":
-        case "rain":
-        case "thunderstorm":
+        case "Rain":
+        case "Drizzle":
+        case "Thunderstorm":
+        case "Tornado":
+        case "Squall":  
           body.classList.add("rosa-lluvia");
           break;
-        case "mist":
+        case "Mist":
+        case  "Smoke":
+        case "Haze":
+        case "Fog":
+        case "Dust":
+        case "Ash":  
+        case "Sand":      
           body.classList.add("gris-niebla");
           break;   
       }
@@ -88,3 +85,5 @@ function showPosition(position) {
 }
 
 getLocation();
+
+
