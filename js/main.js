@@ -58,6 +58,10 @@ function showPosition(position) {
 
       loadScreen.style.opacity = 0;
 
+      setTimeout(function(){
+        loadScreen.style.zIndex = -1;
+      }, 1000);
+
       const clima = data.weather[0].main;
 
       ciudad.innerHTML = data.name;
