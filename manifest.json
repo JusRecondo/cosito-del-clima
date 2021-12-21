@@ -2,7 +2,7 @@
   "name": "El cosito del clima",
   "short_name": "Clima",
   "description": "Infalible App del clima, como el souvenir de Santa Teresita.",
-  "background_color": "#e6e4e4",
+  "background_color": "#ffffff",
   "theme_color": "#000000",
   "start_url": "./",
   "scope": "./",
