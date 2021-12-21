@@ -54,8 +54,6 @@ function showPosition(position) {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-
       loadScreen.style.opacity = 0;
 
       setTimeout(function(){

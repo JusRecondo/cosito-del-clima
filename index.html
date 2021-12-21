@@ -1,80 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El cosito del clima</title>
     <link rel="stylesheet" href="css/styles.min.css">
+
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
     <meta property="og:title" content="El cosito del clima">
-    <meta property="og:description"
-          content="Sitio que de dice el clima como los souvenir de santa teresita.">
-    <meta property="og:image"
-          content="https://jusrecondo.github.io/cosito-del-clima/img/cosito-del-clima.png">
-    <meta property="og:url"
-          content="https://jusrecondo.github.io/cosito-del-clima/">
+    <meta property="og:description" content="Sitio que de dice el clima como los souvenir de santa teresita.">
+    <meta property="og:image" content="https://jusrecondo.github.io/cosito-del-clima/img/cosito-del-clima.png">
+    <meta property="og:url" content="https://jusrecondo.github.io/cosito-del-clima/">
     <meta property="og:type" content="website">
-</head>
-<body>
 
-    <div class="loader-screen">
-        <img src="img/delfines.png" class="loader">
-    </div>
-    
+    <!-- Meta tags PWA -->
+    <meta name="theme-color" content="#000000">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+
+    <!-- IOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="apple-touch-icon" href="assets/apple-icon-180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+  </head>
+  <body>
+    <article class="loader-screen">
+      <img src="img/delfines.png" class="loader">
+    </article>
     <main>
-        <section>
-            <h1>El cosito del clima</h1>
-            <h2 id="ciudad"></h2>
-            <span id="ubicacion"></span>
-            <div>
-                <img id="iconoClima">
-                <span id="temperatura"></span>
-            </div>
+      <section>
+        <h1>El cosito del clima</h1>
+        <h2 id="ciudad"></h2>
+        <span id="ubicacion"></span>
+        <article>
+          <img id="iconoClima">
+          <span id="temperatura"></span>
+        </article>
+        <img src="img/delfines.png" id="delfines">
+      </section>
+      <section>
+        <table>
+          <tbody>
+            <tr>
+              <th>color</th>
+              <th>clima</th>
+            </tr>
+            <tr>
+              <td>azul</td>
+              <td>despejado</td>
+            </tr>
+            <tr>
+              <td>violeta</td>
+              <td>nublado o inestable</td>
+            </tr>
+            <tr>
+              <td>rosa</td>
+              <td>lluvia o tormenta</td>
+            </tr>
+            <tr>
+              <td>gris</td>
+              <td>neblina</td>
+            </tr>
+            <tr>
+              <td>blanco</td>
+              <td>nieve</td>
+            </tr>
+            <tr>
+              <td>rojo</td>
+              <td>no se pudo encontrar tu ubicación :(</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-            <table>
-                <tr>
-                    <th>color</th>
-                    <th>clima</th>
-                </tr>
-                <tr>
-                    <td>azul</td>
-                    <td>despejado</td>
-                </tr>
-                <tr>
-                    <td>violeta</td>
-                    <td>nublado o inestable</td>
-                </tr>
-                <tr>
-                    <td>rosa</td>
-                    <td>lluvia o tormenta</td>
-                </tr>
-                <tr>
-                    <td>gris</td>
-                    <td>neblina</td>
-                </tr>
-                <tr>
-                    <td>blanco</td>
-                    <td>nieve</td>
-                </tr>
-                <tr>
-                    <td>rojo</td>
-                    <td>no se pudo encontrar tu ubicación :(</td>
-                </tr>
-            </table>
-        </section>
-        <section>
+      <!-- <section>
             <img src="img/delfines.png" id="delfines">
-        </section>
-
-
+        </section> -->
     </main>
     <footer>
-
-        <p><a href="https://github.com/JusRecondo/cosito-del-clima" target="_blank">Ver en GitHub</a></p>
+      <p>Hecho con 🖤 por jus recondo - <a href="https://github.com/JusRecondo/cosito-del-clima" target="_blank">GitHub</a></p>
     </footer>
-
     <script src="js/main.js"></script>
-</body>
+    <script src="./register.js"></script>
+  </body>
 </html>
